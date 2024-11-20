@@ -5,17 +5,18 @@ import Title from '@/components/Title';
 import Paragraph from '@/components/Paragraph';
 import SlideIndicator from '@/components/SlideIndicator';
 import { useRouter } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const AuthScreen = () => {
   const router = useRouter();
   return (
-    <View
+    <SafeAreaView
       style={{
+        backgroundColor: 'white',
         padding: 30,
         gap: 30,
         flex: 1,
         justifyContent: 'space-between',
-        paddingTop: 60,
       }}
     >
       <View style={{ overflow: 'hidden', borderRadius: 40 }}>
@@ -30,9 +31,9 @@ const AuthScreen = () => {
           }}
         />
       </View>
-      <View style={{ gap: 20 }}>
+      <View style={{ gap: 20, paddingHorizontal: 20 }}>
         <Title style={{ textAlign: 'center' }}>
-          Transform speect to Text Effortlessly.
+          Transform speech into Text Effortlessly.
         </Title>
         <Paragraph style={{ textAlign: 'center' }}>
           Capture every detail with RecogNotes, Record conversations, lecture,
@@ -57,7 +58,7 @@ const AuthScreen = () => {
           onPress={() => router.push('/login')}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

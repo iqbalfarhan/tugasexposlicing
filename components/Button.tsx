@@ -23,8 +23,8 @@ const Button: FC<CustomButton> = (props) => {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 20,
-        borderWidth: mode == 'outlined' ? 2 : 0,
+        borderRadius: 14,
+        borderWidth: mode == 'outlined' ? 1.5 : 0,
         borderColor: mode === 'outlined' ? color : 'transparent',
       }}
     >
@@ -47,7 +47,7 @@ const Button: FC<CustomButton> = (props) => {
           style={{
             color: mode === 'filled' ? 'white' : color,
             fontSize: 16,
-            fontWeight: 'bold',
+            fontFamily: 'Nunito-Bold',
             textAlign: 'center',
           }}
         >
