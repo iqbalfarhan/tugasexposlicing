@@ -1,17 +1,24 @@
 import { Text, TouchableOpacity, View } from 'react-native';
 import React, { FC, ReactNode } from 'react';
 import { Octicons } from '@expo/vector-icons';
+import { COLORS } from '@/constants/colors';
 
 interface CustomButton {
   label: string;
-  color: string;
+  color?: string;
   icon?: keyof (typeof Octicons)['glyphMap'];
   mode?: 'filled' | 'outlined';
   onPress?: () => void;
 }
 
 const Button: FC<CustomButton> = (props) => {
-  const { label, color, icon, mode = 'filled', onPress } = props;
+  const {
+    label,
+    color = COLORS.primary,
+    icon,
+    mode = 'filled',
+    onPress,
+  } = props;
   return (
     <TouchableOpacity
       onPress={onPress}

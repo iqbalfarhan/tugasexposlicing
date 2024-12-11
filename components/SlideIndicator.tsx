@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import React, { FC } from 'react';
+import { COLORS } from '@/constants/colors';
 
 interface SlideIndicatorProps {
   count: number;
@@ -22,7 +23,8 @@ const SlideIndicator: FC<SlideIndicatorProps> = ({ count, active }) => {
             width: 10,
             height: 10,
             borderRadius: 10,
-            backgroundColor: active === index + 1 ? '#6b56f1' : '#d9d4fb',
+            backgroundColor:
+              active === index + 1 ? COLORS.primary : COLORS.inputbg,
           }}
           key={index}
         ></View>

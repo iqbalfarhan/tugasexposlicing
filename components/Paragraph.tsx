@@ -14,13 +14,13 @@ const Paragraph: FC<ParagraphProps> = ({
   return (
     <Text
       style={[
-        style,
         {
           fontSize: 16,
           color: color,
           lineHeight: 28,
-          fontFamily: 'Nunito-Medium',
+          fontFamily: 'Nunito-Bold',
         },
+        style,
       ]}
       {...other}
     >
